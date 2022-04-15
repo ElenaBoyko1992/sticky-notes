@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap&_v=20220415170150"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Sticky notes</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<main>
+			<div class="page _container">
+				<div class="page__header header-page">
+					<div class="header-page__logo">Sticky Notes</div>
+					<div class="header-page__button-block">
+						<button class="header-page__button" type="button">Add Note</button>
+					</div>
+				</div>
+				<div class="page__area-sticker sticker-area"></div>
+				<div class="page__note-window">
+					<form action="" class="page__window-input input-window" onsubmit="return false">
+						<div class="input-window__input">
+							<textarea type="text" name="textarea" placeholder="Note..." autocomplete="off"></textarea>
+						</div>
+						<div class="input-window__close">X</div>
+					</form>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>

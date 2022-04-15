@@ -1,0 +1,189 @@
+/* ШРИФТЫ===============================================================================================================*/
+
+/*ШРИФТ ПО УМОЛЧАНИЮ======================================================================================================*/
+$font-family: 'Architects Daughter', cursive;
+
+/*ПЕРЕМЕННЫЕ==============================================================================================================*/
+$minWidth: 320px;
+$maxWidth: 1920px; //общая ширина макета
+$maxWidthContainer: 1230px; //увеличиваем величину из макета с учетом паддингов
+$md1: 1632px; //$maxWidthContainer + 12px
+$md2: 991.98px;
+$md3: 767.98px;
+$md4: 479.98px;
+/*ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ==============================================================================================*/
+@import "null";
+
+body {
+	font-family: $font-family;
+	font-size: 18px;
+	font-weight: 400;
+	color: #000000;
+
+	background: #d5b55b;
+}
+
+/*ОБОЛОЧКА===============================================================================================================*/
+
+.wrapper {
+	min-width: 100%;
+	min-height: 100vh;
+
+
+}
+
+
+/*ОСНОВНАЯ СЕТКА====================================================================================*/
+
+._container {
+	max-width: $maxWidthContainer;
+	margin: 0 auto;
+	padding: 0px 25px;
+ 
+ }
+ 
+/*MAIN===============================================================*/
+.page {
+
+	// .page__header
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 0px 30px;
+		@media (max-width: $md3) {
+			flex-direction: column;
+		}
+	}
+
+	// .page__area-sticker
+
+	&__area-sticker {
+	}
+
+	//page__note-window
+
+	&__note-window {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: #9a7e316a;
+		width: 100%;
+		min-height: 100%;
+		display: none;
+		&.active {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	// .page__window-input
+
+	&__window-input {
+		
+	}
+}
+.header-page {
+
+	// .header-page__logo
+
+	&__logo {
+		padding-left: 75px;
+		position: relative;
+		min-height: 65px;
+		display: flex;
+		align-items: center;
+		color: #fff;
+		font-size: 30px;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 65px;
+			height: 65px;
+			background: url(../img/logo-icon.png) center no-repeat;
+		}
+		@media (max-width: $md3) {
+			margin-bottom: 15px;
+		}
+	}
+
+	//header-page__button-block
+	&__button-block {
+
+
+	}
+
+	// .header-page__button
+	&__button {
+			display: block;
+			padding: 8px 15px;
+			border-radius: 6px;	
+		&.hover-button {
+			&:hover {
+				background-color: #bf9c3d;
+				border: 1px solid #fff;
+				color: #fff;
+			}
+		}
+	}
+}
+.input-window {
+	position: relative;
+	// .input-window__input
+
+	&__input {
+		width: 300px;
+		height: 300px;
+		background-color: #fff;
+		textarea {
+			width: 100%;
+			height: 100%;
+			resize: none;
+			display: block;
+			padding: 35px;
+			border: 1px solid gray;
+			box-shadow: 0 0 10px rgba(0,0,0,0.5); 			
+		}
+		
+		}
+
+
+	// .input-window__close
+
+	&__close {
+		position: absolute;
+		top: 25px;
+		right: 25px;
+		border: 1px solid gray;
+		padding: 3px 5px;
+		border-radius: 50%;
+		font-size: 16px;
+		color: gray;
+		cursor: pointer;
+	}
+}
+.sticker-area {
+	display: flex;
+	flex-wrap: wrap; 
+	justify-content: center;
+	padding-bottom: 30px;
+
+
+	//sticker-area__sticker
+	&__sticker {
+		flex: 0 0 230px;
+		height: 230px;
+		box-shadow: 0 10px 15px rgba(0,0,0,0.6);
+		padding: 15px;
+		cursor: pointer;
+		margin-bottom: 20px;
+		overflow: hidden;
+	}
+}
+
+
+
